@@ -1,0 +1,1 @@
+A fun vanilla Javascript  app to learn more about arrays

@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cardio App Array 🏃🏽‍♂️🏃♀️</title>
+    </head>
+    <body>
+        <p><em>Heyyy: checkout the Javascript console</em>👓</p>
+        <script>
+        
+        
+
+
+
+         // Data to build our App 
+        const inventors = [
+
+            { first: "Albert", last: "Einstein", year: 1879, passed: 1955 },
+            { first: "Sarah E.", last: "Goode", year: 1878, passed: 1968 },
+            { first: "Katherine", last: "Lovelace", year: 1855, passed: 1905 },
+            { first: "Hanna", last: "Hammarstrom", year: 1829, passed: 1909 },
+            { first: "Nicolaus", last: "Copernicus", year: 1473, passed: 1947 },
+
+        ];
+
+
+        const people = [ "Don, Tech", "Carol, Ken", "John, Doe", "Steve, Smith", "Larry Johnsom" ];
+
+        // Filter the list of inventors for those who were born in the 1500's
+        const fifteen = inventors.filter(inventor => (inventor.year >= 1800 && inventor.year 
+        < 2000))
+
+        console.log(fifteen);
+
+        // Give us and array of the inventory first and last names
+        const fullNames = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
+        console.log(fullNames);
+
+        // Sort the inventors by birthdate, oldest to youngest
+        const ordered = inventors.sort(function(a, b) {
+            if(a.year > b.year) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
+
+        console.table(ordered)
+                
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+     
+       // Sum up the instances of each of these
+       const data = [ "car", "van", "truck", "bike", "walk",  ];
+
+        </script>
+    </body>
+</html>
