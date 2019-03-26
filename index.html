@@ -68,22 +68,38 @@
         });
 
         console.table(oldest)
-                
+        
+        // create a list of Boulevards in Paris that contain 'de' anywhere in the name
+        // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+        const category = document.querySelector("mw-category");
+        const links = Array.from(category.querySelectorAll("a"));
+        const de = links
+        .map(link => link.textContent)
+        .filter(streetName => streetName.includes("de"));
+
     
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+      const alpha = people.sort(function(lastOne, nextOne) {
+          const [ aLast, aFirst ] = lastOne.split(', ');
+          const [ bLast, bFirst ] = nextOne.split(', ');
+          return aLast > bLast ? 1 : -1;
+      });
+      console.log(alpha);
+    
+      
         
      
        // Sum up the instances of each of these
-       const data = [ "car", "van", "truck", "bike", "walk",  ];
+       const data = [ "car", "van", "truck", "bike", "walk", "train", "scooter" ];
+
+       // Reduce Exercise 
+       const transportation = data.reduce(function(obj, item) {
+           if (!obj[item]) {
+               obj[item] = 0;
+           }
+           obj[item]++;
+           return obj;
+       }, {});
+       console.log(transportation);
 
         </script>
     </body>
